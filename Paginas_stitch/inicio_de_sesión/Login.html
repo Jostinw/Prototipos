@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - SonicFlow</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style> body { font-family: 'Inter', sans-serif; } </style>
+</head>
+<body class="bg-black text-white h-screen flex items-center justify-center relative overflow-hidden">
+    <!-- Background Ambient -->
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover opacity-20 blur-sm"></div>
+    
+    <div class="relative z-10 bg-[#121212] p-8 md:p-12 rounded-2xl shadow-2xl w-full max-w-md border border-gray-800">
+        <div class="text-center mb-8">
+            <i class="fa-solid fa-music text-green-500 text-4xl mb-4"></i>
+            <h2 class="text-3xl font-bold text-white mb-2">Bienvenido de Nuevo</h2>
+            <p class="text-gray-400 text-sm">Inicia sesión para continuar</p>
+        </div>
+        
+        <form class="space-y-5" onsubmit="event.preventDefault(); window.location.href='home.html';">
+            <div>
+                <label class="block text-xs font-bold text-gray-300 mb-1">Correo Electrónico o Usuario</label>
+                <input type="email" placeholder="Ingresa tu correo" class="w-full bg-[#2a2a2a] border border-gray-700 rounded p-3 text-sm text-white focus:border-green-500 focus:outline-none transition">
+            </div>
+            <div>
+                <label class="block text-xs font-bold text-gray-300 mb-1">Contraseña</label>
+                <div class="relative">
+                    <input type="password" placeholder="Ingresa tu contraseña" class="w-full bg-[#2a2a2a] border border-gray-700 rounded p-3 text-sm text-white focus:border-green-500 focus:outline-none transition">
+                    <i class="fa-regular fa-eye-slash absolute right-3 top-3.5 text-gray-400 cursor-pointer text-xs"></i>
+                </div>
+            </div>
+            <div class="flex items-center justify-between text-xs">
+                <label class="flex items-center gap-2 cursor-pointer">
+                    <input type="checkbox" class="rounded bg-gray-700 border-gray-600 text-green-500 focus:ring-0">
+                    <span class="text-gray-400">Recordarme</span>
+                </label>
+                <a href="#" class="text-green-500 hover:underline">Olvidé mi contraseña</a>
+            </div>
+            
+            <button type="submit" class="w-full bg-green-500 hover:bg-green-400 text-black font-bold py-3 rounded-full transition transform hover:scale-[1.02]">Iniciar Sesión</button>
+        </form>
+
+        <div class="relative my-8">
+            <div class="absolute inset-0 flex items-center"><div class="w-full border-t border-gray-700"></div></div>
+            <div class="relative flex justify-center text-xs uppercase"><span class="bg-[#121212] px-2 text-gray-500">O</span></div>
+        </div>
+
+        <button class="w-full border border-gray-600 hover:border-white text-white font-medium py-2.5 rounded-full flex items-center justify-center gap-3 transition">
+            <i class="fa-brands fa-google"></i> Continuar con Google
+        </button>
+        
+        <p class="mt-8 text-center text-xs text-gray-400">
+            ¿No tienes una cuenta? <a href="#" class="text-green-500 font-bold hover:underline">Regístrate</a>
+        </p>
+    </div>
+</body>
+</html>

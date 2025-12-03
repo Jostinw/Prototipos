@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - SonicFlow</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style> body { font-family: 'Inter', sans-serif; } </style>
+</head>
+<body class="bg-[#0f0f12] text-white h-screen flex flex-col">
+    <!-- Header -->
+    <header class="flex items-center justify-between px-8 py-4 bg-[#0f0f12] border-b border-gray-800">
+        <div class="flex items-center gap-2 font-bold text-xl"><i class="fa-solid fa-wave-square text-blue-500"></i> SonicFlow</div>
+        <nav class="flex gap-6 text-sm text-gray-400">
+            <a href="home.html" class="hover:text-white">Inicio</a>
+            <a href="library.html" class="hover:text-white">Biblioteca</a>
+        </nav>
+        <div class="flex gap-4">
+            <a href="search.html" class="bg-gray-800 px-4 py-1.5 rounded-full text-xs text-gray-300 flex items-center gap-2 hover:bg-gray-700 transition"><i class="fa-solid fa-search"></i> Buscar</a>
+            <div class="w-8 h-8 rounded-full bg-blue-500"></div>
+        </div>
+    </header>
+    
+    <div class="flex flex-1 overflow-hidden">
+        <!-- Sidebar Settings -->
+        <aside class="w-64 bg-[#121212] p-6 border-r border-gray-800 hidden md:block">
+            <h2 class="text-xl font-bold mb-6">Configuración</h2>
+            <ul class="space-y-2">
+                <li><a href="#" class="flex items-center gap-3 p-2 bg-blue-600 rounded text-white text-sm font-medium"><i class="fa-solid fa-user"></i> Perfil</a></li>
+                <li><a href="#" class="flex items-center gap-3 p-2 text-gray-400 hover:text-white hover:bg-gray-800 rounded text-sm transition"><i class="fa-solid fa-volume-high"></i> Audio</a></li>
+                <li><a href="#" class="flex items-center gap-3 p-2 text-gray-400 hover:text-white hover:bg-gray-800 rounded text-sm transition"><i class="fa-regular fa-bell"></i> Notificaciones</a></li>
+                <li><a href="#" class="flex items-center gap-3 p-2 text-gray-400 hover:text-white hover:bg-gray-800 rounded text-sm transition"><i class="fa-solid fa-lock"></i> Privacidad</a></li>
+                <li class="pt-4 border-t border-gray-800 mt-4"><a href="login.html" class="flex items-center gap-3 p-2 text-red-400 hover:bg-red-900/20 rounded text-sm transition"><i class="fa-solid fa-arrow-right-from-bracket"></i> Cerrar Sesión</a></li>
+            </ul>
+        </aside>
+        
+        <!-- Content -->
+        <main class="flex-1 p-8 overflow-y-auto">
+            <div class="max-w-3xl mx-auto space-y-8">
+                <!-- User Profile Section -->
+                <section class="bg-[#18181b] p-6 rounded-lg border border-gray-800">
+                    <h3 class="text-lg font-bold mb-4">Perfil de Usuario</h3>
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="flex flex-col items-center gap-3">
+                            <div class="w-32 h-32 rounded-full bg-gray-700 flex items-center justify-center text-4xl text-gray-500"><i class="fa-solid fa-user"></i></div>
+                            <button class="bg-gray-700 hover:bg-gray-600 px-4 py-1.5 rounded text-xs font-bold transition">Cambiar Foto</button>
+                        </div>
+                        <div class="flex-1 space-y-4">
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs text-gray-400 mb-1">Nombre de Usuario</label>
+                                    <input type="text" value="Ana García" class="w-full bg-[#27272a] rounded p-2 text-sm border border-gray-700">
+                                </div>
+                                <div>
+                                    <label class="block text-xs text-gray-400 mb-1">Correo Electrónico</label>
+                                    <input type="email" value="ana.garcia@email.com" class="w-full bg-[#27272a] rounded p-2 text-sm border border-gray-700">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs text-gray-400 mb-1">Biografía</label>
+                                <textarea class="w-full bg-[#27272a] rounded p-2 text-sm border border-gray-700 h-20 resize-none">Amante de la música indie y electrónica. Siempre descubriendo nuevos sonidos.</textarea>
+                            </div>
+                            <div class="flex justify-end">
+                                <button class="bg-blue-600 hover:bg-blue-500 px-6 py-2 rounded font-bold text-sm transition">Guardar Cambios</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Audio Preferences -->
+                <section class="bg-[#18181b] p-6 rounded-lg border border-gray-800">
+                    <h3 class="text-lg font-bold mb-4">Preferencias de Audio</h3>
+                    <div class="mb-4">
+                        <label class="block text-xs text-gray-400 mb-2">Calidad de Transmisión</label>
+                        <div class="flex bg-[#27272a] rounded p-1 inline-flex">
+                            <button class="px-4 py-1.5 rounded text-xs text-gray-400 hover:text-white">Automático</button>
+                            <button class="px-4 py-1.5 rounded text-xs bg-gray-600 text-white font-bold shadow">Alta (320 kbps)</button>
+                            <button class="px-4 py-1.5 rounded text-xs text-gray-400 hover:text-white">Normal</button>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between py-2 border-t border-gray-800">
+                        <span class="text-sm text-gray-300">Descargas en Alta Calidad</span>
+                        <div class="w-10 h-5 bg-blue-600 rounded-full relative cursor-pointer"><div class="absolute right-1 top-1 w-3 h-3 bg-white rounded-full"></div></div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
